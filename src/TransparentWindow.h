@@ -13,7 +13,7 @@ public:
 };
 
 TransparentWindow::TransparentWindow() {
-  this->set_size_request(800, 500);
+  this->set_default_size(800, 500);
   set_app_paintable(true);
   // Transparent Process
   Glib::RefPtr<Gdk::Visual> visual = get_screen()->get_rgba_visual();
