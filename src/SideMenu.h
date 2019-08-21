@@ -27,9 +27,11 @@ SideMenu::SideMenu()
   this->eraseAll = new Gtk::Button("Erase All");
   this->about.signal_clicked().connect(
       sigc::mem_fun(*this, &SideMenu::runAbout));
-
-  logo = Gdk::Pixbuf::create_from_file("./src/images/s_icon.png");
-
+  try {
+    logo = Gdk::Pixbuf::create_from_file("./images/s_icon.png");
+  } catch (...) {
+    Glib::exception_handlers_invoke();
+  }
   editFrame.set_label("Edit");
   editFrame.add(this->editBox);
   brushFrame.set_label("Draw");
