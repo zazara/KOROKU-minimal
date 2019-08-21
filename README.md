@@ -1,6 +1,6 @@
 # ![logo](https://user-images.githubusercontent.com/50822685/63415298-7ca65900-c438-11e9-9d3a-2709337a2c67.png)
 
-KOROKU is painting software to trace pictures for drawing practice. 
+KOROKU is painting software to trace images for drawing practice. 
 KOROKU enables users to trace images anytime.
 
 ## KOROKU-minimal
@@ -13,7 +13,7 @@ Unlike the original version, this software does not include background functions
 
 ## Installation
 
-To install KOROKU, you can choose to download a binary or build from source. The binary support 64bit Windows and 64bit Linux OS.
+To install KOROKU, you can choose to download a binary or build from source. The binaries support 64bit Windows and 64bit Linux OS.
 
 ### Prebuilt binaries
 
