@@ -1,6 +1,6 @@
 # ![logo](https://user-images.githubusercontent.com/50822685/63415298-7ca65900-c438-11e9-9d3a-2709337a2c67.png)
 
-KOROKU is painting software to trace pictures for drawing practice. 
+KOROKU is painting software to trace images for drawing practice. 
 KOROKU enables users to trace images anytime.
 
 ## KOROKU-minimal
