@@ -13,7 +13,7 @@ Unlike the original version, this software does not include background functions
 
 ## Installation
 
-To install KOROKU, you can choose to download a binary or build from source. The binary support 64bit Windows and 64bit Linux OS.
+To install KOROKU, you can choose to download a binary or build from source. The binaries support 64bit Windows and 64bit Linux OS.
 
 ### Prebuilt binaries
 
