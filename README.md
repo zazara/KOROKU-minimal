@@ -24,7 +24,7 @@ Download the binary from [here](https://github.com/zazara/KOROKU-minimal/release
 
 You must have gtkmm-3.0 and g++ installed.
 
-```Shell
+```
 git clone https://github.com/zazara/KOROKU-minimal.git
 cd KOROKU-minimal
 make
