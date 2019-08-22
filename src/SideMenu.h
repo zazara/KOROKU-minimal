@@ -20,6 +20,9 @@
 #include "BrushBox.h"
 #include "EditBox.h"
 #include <gtkmm.h>
+#include <string>
+#include <unistd.h>
+
 namespace KOROKU {
 class SideMenu : public Gtk::Box {
 public:
@@ -35,6 +38,7 @@ private:
 
   Glib::RefPtr<Gdk::Pixbuf> logo;
   void runAbout();
+  std::string GetModuleFileName();
 };
 
 SideMenu::SideMenu()
@@ -46,11 +50,13 @@ SideMenu::SideMenu()
   this->eraseAll = new Gtk::Button("Erase All");
   this->about.signal_clicked().connect(
       sigc::mem_fun(*this, &SideMenu::runAbout));
+
   try {
-    logo = Gdk::Pixbuf::create_from_file("./images/s_icon.png");
+    logo = Gdk::Pixbuf::create_from_file(this->GetModuleFileName().c_str());
   } catch (...) {
     Glib::exception_handlers_invoke();
   }
+
   editFrame.set_label("Edit");
   editFrame.add(this->editBox);
   brushFrame.set_label("Draw");
@@ -76,5 +82,14 @@ void SideMenu::runAbout() {
   aboutDialog.set_modal(true);
   aboutDialog.set_logo(logo);
   aboutDialog.run();
+}
+
+std::string SideMenu::GetModuleFileName() {
+  char buf[1024];
+  readlink("/proc/self/exe", buf, sizeof(buf) - 1);
+  std::string path = buf;
+  path.erase(path.length() - 6, 7);
+  std::string fileName = "/images/s_icon.png";
+  return path + fileName;
 }
 } // namespace KOROKU
